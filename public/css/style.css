@@ -1,0 +1,340 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&display=swap');
+
+
+/*---------------------------------------------------
+    VARIABLES
+---------------------------------------------------*/
+:root {
+    /* Background */
+    --Background-primary: #e7bcbc; 
+    --Background-secondary: #000000; 
+    
+    /* Color Textos */
+    --Text-color-primary: #ffffff;
+    --Text-color-secondary: #000000;
+
+    /* Fuentes */
+    --fuente-primary: 'Open Sans', sans-serif;
+    --fuente-titulo: 'Roboto', sans-serif;
+}
+
+/*---------------------------------------------------
+    MODIFICACIONES GENERALES
+---------------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li, a, ul, ol {
+    text-decoration: none !important;
+    list-style: none;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: auto;
+    font-family: var(--fuente-primary);
+}
+
+::-webkit-scrollbar {
+    width: 5px; 
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(97, 218, 255); 
+    border-radius: 8px; 
+}
+::-webkit-scrollbar-track {
+    background-color: #686868; 
+}
+
+
+/*---------------------------------------------------
+    BODY - HEADER - MAIN - FOOTER
+---------------------------------------------------*/
+/*---------------------------
+    Navegation
+---------------------------*/
+
+.navegation {
+    position: fixed;
+    display: grid;
+    place-items: center;
+
+    width: 76%;
+    height: 28px;
+    top: 30px;
+
+    /* Aplica el gradiente directamente en el fondo */
+    background: linear-gradient(to right, #00ccff, #d500f9);
+    border-radius: 8px;
+    color: rgb(255, 255, 255); 
+    font-size: 14px;
+    font-weight: 500;
+
+    overflow: hidden;
+    z-index: 10000;
+
+    animation: rotate 4s linear infinite;
+}
+
+@keyframes rotate {
+    from {
+        background-position: 0 0;
+    }
+    to {
+        background-position: 100% 0;
+    }
+}
+
+.navegation .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+
+    width: 99.56%;
+    height: 85%;
+
+    border-radius: 7px;
+    background: #171718;
+}
+
+/*---------------------------
+    Contenedor Logo
+---------------------------*/
+.navegation .contLogo,
+.navegation .contUsuario {
+    display: grid;
+    place-items: center;
+
+    width: 25%;
+}
+
+/*---------------------------
+    Contenedor Link Nav
+---------------------------*/
+.navegation .contLinkNav {
+    display: grid;
+    place-items: center;
+
+    width: 50%;
+}
+
+.navegation .contLinkNav .linkNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navegation .contLinkNav .linkNav a {
+    margin: 0 13px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.navegation .contLinkNav .linkNav a:hover {
+    color: rgb(102, 92, 255);
+    text-shadow: 0px 0px 25px rgb(0, 174, 255);
+}
+
+/*---------------------------
+    Contenedor Usuario 
+---------------------------*/
+.navegation .contUsuario {
+    display: grid;
+    place-items: center;
+
+    width: 25%;
+}
+
+/*---------------------------------------------------
+    MAIN SECTION HOME
+---------------------------------------------------*/
+main {
+    width: 100%;
+    height: auto;
+}
+/*---------------------------------------------------
+    HOME DESCRIPTION WELCOME
+---------------------------------------------------*/
+.home {
+    display: grid;
+    place-items: center;    
+
+    background: #171718;
+    width: 100%;
+    height: 100vh;
+}
+.home .homeDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.home .homeDescription .welcome {
+    display: flex;
+    flex-direction: row;
+}
+.home .homeDescription .welcome .textW {
+
+    font-size: 82px;
+    font-weight: 900;
+    color: #ffffff;
+}
+.home .homeDescription .welcome .pW {
+    position: relative;
+    top: 75px;
+    width: 13px;
+    height: 13px;
+
+    background: rgb(0, 174, 255);
+    border-radius: 50%;
+}
+
+.home .homeDescription .whoiam{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.home .homeDescription .whoiam .md{
+    height: 3px;
+    width: 30px;
+    margin: 0 10px ;
+    background: rgb(0, 174, 255);
+}
+.home .homeDescription .whoiam .text{
+    margin-bottom: 5px;
+    font-size: 36px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.home .homeDescription .thatiam{
+    margin-bottom: 25px;
+
+    font-size: 16px;
+    font-weight: 100;
+    color: #ffffff;
+
+}
+.home .homeDescription .downloadCV{
+    display: grid;
+    place-items: center;
+
+    width: 160px;
+    height: 42px;
+
+    background: rgb(0, 174, 255);
+    border-radius: 20px;
+    border: 2px solid rgb(0, 174, 255);
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 400;
+
+    z-index: 9999;
+}
+
+.home .homeDescription .downloadCV:hover {
+    background: transparent !important;
+    border-radius: 20px;
+    border: 2px solid rgb(0, 174, 255);
+
+    box-shadow: 0px 0px 25px rgb(0, 174, 255);
+    text-shadow: 0px 0px 25px rgb(0, 174, 255);
+    color: rgb(0, 174, 255);
+    font-size: 13px;
+}
+
+/*---------------------------------------------------
+    ARROW HOME
+---------------------------------------------------*/
+.arrow-container {
+    position: absolute;
+    top: 470px;
+    width: 40px; 
+    height: 40px; 
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.arrow-container .arrow-down{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12px 12px 0 12px; 
+    border-color: rgb(0, 174, 255) transparent transparent transparent; 
+    transition: transform 1s ease;
+}
+.arrow-down.down {
+    transform: translate(-50%, 30px); 
+}
+
+/*---------------------------------------------------
+    SECTION'S WAVES
+---------------------------------------------------*/
+.sectionWaves {
+    position: relative;
+    margin-top: -250px;
+    background: #171718;    
+}
+
+/*---------------------------------------------------
+    SECTION'S FEATURED PROJECTS
+---------------------------------------------------*/
+.featuredProjects { 
+    position: relative;
+    top: -5px;
+    width: 100%;
+    height: 100vh;
+    color: #ffffff;
+    background: rgb(208, 246, 255);
+    font-size: 50px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

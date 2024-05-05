@@ -1,0 +1,361 @@
+/*-------------------------------------------
+    VARIABLES 
+-------------------------------------------*/
+:root {
+    /* Background */
+    --Background-primary: #e7bcbc; 
+    --Background-secondary: #000000; 
+    
+    /* Color Textos */
+    --Text-color-primary: #ffffff;
+    --Text-color-secondary: #000000;
+
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Ubuntu+Sans:ital,wght@0,100..800;1,100..800&display=swap');
+/*------------------------------------------- 
+    MODIFICACIONES GENERALES 
+-------------------------------------------*/
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li, a, ul, ol {
+    text-decoration: none !important;
+    list-style: none;
+}
+
+body {
+    background: #171718;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: auto;
+}
+
+::-webkit-scrollbar {
+    width: 5px; 
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(97, 218, 255); 
+    border-radius: 8px; 
+}
+::-webkit-scrollbar-track {
+    background-color: #686868; 
+}
+
+/*-------------------------------------------
+    BODY - HEADER - MAIN - FOOTER 
+-------------------------------------------*/
+
+/*-------------------------------------------
+    NAVEGATION 
+-------------------------------------------*/
+.navegation {
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 76%;
+    height: 38px;
+    top: 30px;
+    border-radius: 8px;
+    color: rgb(255, 255, 255); 
+    font-size: 14px;
+    font-weight: 500;
+    z-index: 10000;        
+    backdrop-filter: blur(10px); /* Puedes ajustar el valor del desenfoque según tus preferencias */
+
+    border: 2px solid  #448fffe3 ;
+}
+
+.navegation .content {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+    width:100%; 
+    height: 100%; 
+    border-radius: 6px;
+    backdrop-filter: blur(10px); /* Puedes ajustar el valor del desenfoque según tus preferencias */
+    background-color: rgba(255, 255, 255, 0.205); /* Color blanco semitransparente */
+
+}
+
+/*-----------------------------
+    Contenedor Link Nav 
+-----------------------------*/
+.navegation .content .contLinkNav {
+    display: grid;
+    place-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+.navegation .content .contLinkNav .linkNav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    text-align: center;
+}
+
+.navegation .content .contLinkNav .linkNav .link {
+    margin: 0 10px;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+
+.navegation .content .contLinkNav .linkNav .link:hover {
+    color: rgb(102, 92, 255);
+    text-shadow: 0px 0px 25px rgb(0, 174, 255);
+}
+
+/*-----------------------------
+    Contenedor Usuario 
+-----------------------------*/
+.navegation .content .contUsuario {
+    display: grid;
+    place-items: center;
+    width: 25%;
+}
+.navegation .content .contUsuario .usuario  {
+    width: 100%;
+    display: grid;
+    place-items: center;
+}
+.navegation .content .contUsuario .usuario .search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+
+    width: 100%;
+    height: 100%;
+}
+.navegation .content .contUsuario .usuario .search .input-search-navbar {
+    width: 200px;
+    height: 28px;
+    border-radius: 5px;
+    border: 2px solid #ffffff;
+    background: transparent;
+    padding-left: 5px; /* Agrega un espacio de 5px al texto a la izquierda */
+    color: white; /* Establece el color del texto en blanco */
+}
+
+.navegation .content .contUsuario .usuario .search .input-search-navbar::placeholder {
+    color: white; /* Establece el color del texto de marcador de posición en blanco */
+}
+
+.navegation .content .contUsuario .usuario .search .input-search-navbar:focus {
+    outline: none; /* Elimina el contorno de enfoque predeterminado */
+    border-color: white; /* Cambia el color del borde al enfocar */
+    caret-color: white; /* Cambia el color del cursor al enfocar */
+}
+
+.navegation .content .contUsuario .usuario .search .btn-search-navbar {
+    display: grid;
+    place-items: center ;
+    width: 27px;
+    height: 100%;
+    margin-right: 5px;
+    background:  transparent !important;
+    border: none;
+
+}
+.navegation .content .contUsuario .usuario .search .btn-search-navbar img {
+    width: 23px;
+}
+.navegation .content .contUsuario .usuario .search .btn-search-navbar img:hover {
+    transform: scale(1.1);
+    box-shadow: rgba(255, 255, 255, 0.623) ;
+    cursor: pointer;
+}
+
+/*-----------------------------
+    Contenedor Logo 
+-----------------------------*/
+.navegation .content .contLogo {
+    display: grid;
+    place-items: center;
+    width: 25%;
+    height: 100%;
+}
+
+
+/*-------------------------------------------
+    MAIN SECTION HOME 
+-------------------------------------------*/
+main {
+    width: 100%;
+    height: auto;
+
+    z-index: 0;
+}
+
+/*-------------------------------------------  
+    HOME DESCRIPTION WELCOME 
+-------------------------------------------*/
+.home {
+    display: grid;
+    place-items: center;    
+    background: #171718;
+    width: 100%;
+    height: 100vh;
+}
+
+.home .homeDescription {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.home .homeDescription .welcome {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+}
+
+.home .homeDescription .welcome .textW {
+    font-size: 82px;
+    font-weight: 900;
+    color: #ffffff;
+}
+
+.home .homeDescription .welcome .pW {
+    position: relative;
+    top: 75px;
+    width: 13px;
+    height: 13px;
+    background: rgb(0, 174, 255);
+    border-radius: 50%;
+}
+
+.home .homeDescription .whoiam {
+    position: relative;
+    bottom: 25px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.home .homeDescription .whoiam .md {
+    height: 3px;
+    width: 30px;
+    margin: 0 10px ;
+    background: rgb(0, 174, 255);
+}
+
+.home .homeDescription .whoiam .text {
+    margin-bottom: 5px;
+    font-size: 36px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+.home .homeDescription .thatiam {
+    position: relative;
+    bottom: 33px;
+    font-size: 16px;
+    font-weight: 100;
+    color: #ffffff;
+}
+
+.home .homeDescription .downloadCV {
+    position: relative;
+    display: grid;
+    place-items: center;
+    width: 160px;
+    height: 42px;
+    bottom: 20px;
+    margin-bottom: 20px;
+    background: rgb(0, 174, 255);
+    border-radius: 20px;
+    border: 2px solid rgb(0, 174, 255);
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 400;
+    z-index: 9999;
+}
+
+.home .homeDescription .downloadCV:hover {
+    background: transparent !important;
+    border-radius: 20px;
+    border: 2px solid rgb(0, 174, 255);
+    box-shadow: 0px 0px 25px rgb(0, 174, 255);
+    text-shadow: 0px 0px 25px rgb(0, 174, 255);
+    color: rgb(0, 174, 255);
+    font-size: 13px;
+}
+
+/*-----------------------------
+    ARROW HOME 
+-----------------------------*/
+.arrow-container {
+    position: absolute;
+    top: 440px;
+    width: 40px; 
+    height: 40px; 
+    cursor: pointer;
+    z-index: 9999;
+}
+
+.arrow-container .arrow-down {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 12px 12px 0 12px; 
+    border-color: rgb(0, 174, 255) transparent transparent transparent; 
+    transition: transform 1s ease;
+}
+
+.arrow-down.down {
+    transform: translate(-50%, 30px); 
+}
+
+/*------------------------------------------- 
+    SECTION'S WAVES 
+-------------------------------------------*/
+.sectionWaves {
+    position: relative;
+    margin-top: -255px;
+    background: #171718;   
+    
+    z-index: 1;
+}
+
+/*-------------------------------------------
+    SECTION'S FEATURED PROJECTS 
+-------------------------------------------*/
+.featuredProjects { 
+    position: relative;
+    top: -5px;
+    width: 100%;
+    height: 100vh;
+    color: #ffffff;
+    background: rgb(67,100,107);
+    font-size: 50px;
+}
+
+
+
+
+
+
+
